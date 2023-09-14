@@ -9,6 +9,7 @@
 
 
 - [Usage](#usage)
+- [Installation](#installation)
 - [Credits](#credits)
 
 ## Usage
@@ -20,6 +21,23 @@ This message is for store manager. The notification module helps with negotiatio
 
 The form to negotiate directly with the store manager is now added to the product page.
 <img src="https://imgur.com/cj40s1z.png" />
+
+## Installation
+
+**Using Composer**
+
+* composer require hyugan/module-counteroffer
+* bin/magento setup:upgrade
+* bin/magento setup:di:compile
+
+**_or_**
+
+* Click Code dropdown in githb & Download
+* Unzip the file
+* Create Directory(s) as app/code/Hyugan/CounterOffer
+* copy all above files and paste inside the folder CounterOffer
+* bin/magento setup:upgrade
+* bin/magento setup:di:compile
 
 ## Credits
 
