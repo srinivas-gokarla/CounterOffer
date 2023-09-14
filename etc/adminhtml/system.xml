@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="hyugan" translate="label" sortOrder="402">
+            <label>Hyugan Extensions</label>
+        </tab>
+        <section id="hyugan_settings" translate="label" type="text" sortOrder="1300" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Notice Message</label>
+            <tab>hyugan</tab>
+            <resource>Hyugan_CounterOffer::helloworld_config</resource>
+            <group id="notice" type="text"  sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Notice message</label>
+                    <field id="messageone" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Message:</label>
+                        <validate>required-entry</validate>
+                        <comment>Enter Message</comment>
+                    </field>
+            </group>
+        </section>
+    </system>
+</config>

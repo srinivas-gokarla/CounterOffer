@@ -1,0 +1,87 @@
+<?php /** @var Hyugan\CounterOffer\Block\Form $block */
+/** @var Magento\Framework\Escaper $escaper */ ?>
+<?php if ($product = $block->getProduct()): ?>
+    <div id="custom-form">
+        <form class="form"
+              action="<?= $block->getActionUrl() ?>"
+              id="custom-form"
+              method="post"
+              style="border-style: solid;
+            border-color:lightgrey;
+padding: 10px"
+              onSubmit="return validate(this);"
+              data-hasrequired="<?php echo __('* Required Fields') ?>"
+              data-mage-init='{"validation":{}}'>
+            <input type="hidden" name="productsku" id="productsku" value="<?= $product->getSku() ?>"/>
+            <input type="hidden" name="productname" id="productname" value="<?= $product->getName() ?>"/>
+            <fieldset class="fieldset">
+
+                <h3 style=" margin-bottom: 15px;
+            /*color: black;*/
+            /*padding-bottom: 30px;*/
+            /*border-bottom: solid;*/
+            /*border-color:black;*/
+            text-align:center;">
+                    NEGOTIATE
+                </h3>
+
+                <div class="field price">
+                    <label class="label" for="price"><span><?php echo __('Price') ?></span></label>
+                    <div class="control">
+                        <input name="price" id="price" title="<?php echo __('Price') ?>" class="input-text"
+                               type="number"
+                               data-validate="{required:true}"/>
+                    </div>
+                </div>
+
+
+                <div class="comment field">
+                    <label class="label" for="comment"><span><?php echo __('What’s on your mind?') ?></span></label>
+                    <div class="control">
+                    <textarea name="comment" id="comment" title="<?php echo __('Your Comment Please') ?>"
+                              class="input-text" cols="5" rows="3" data-validate="{required:true}"></textarea>
+                    </div>
+                </div>
+
+
+                <div class="field name required">
+                    <label class="label" for="name"><span><?php echo __('Name') ?></span></label>
+                    <div class="control">
+                        <input name="name" id="name" title="<?php echo __('Name') ?>" class="input-text"
+                               type="text" data-validate="{required:true}"/>
+                    </div>
+                </div>
+
+
+                <div class="field telephone required">
+                    <label class="label" for="telephone"><span><?php echo __('Phone Number') ?></span></label>
+                    <div class="control">
+                        <input name="telephone" id="telephone" title="<?php echo __('Phone Number') ?>"
+                               class="input-text" type="number"/>
+                    </div>
+                </div>
+
+
+                <div class="field email required">
+                    <label class="label" for="email"><span><?php echo __('Email') ?></span></label>
+                    <div class="control">
+                        <input name="email" id="email" title="<?php echo __('Email') ?>" class="input-text"
+                               type="email" data-validate="{required:true, 'validate-email':true}"/>
+                    </div>
+                </div>
+
+            </fieldset>
+
+
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <input type="hidden" name="hideit" id="hideit" value=""/>
+                    <button type="submit" title="<?php echo __('Submit') ?>" class="action submit primary"
+                            id="custom_btn">
+                        <span><?php echo __('Submit') ?></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+<?php endif; ?>

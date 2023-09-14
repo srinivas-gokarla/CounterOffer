@@ -1,0 +1,39 @@
+<!--@subject {{trans "counter offer received"}} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<table class="message-details">
+
+    <tr>
+        <td><strong>{{trans "Price:"}}</strong></td>
+        <td>{{var price}}</td>
+    </tr>
+
+    <tr>
+        <p><strong>{{trans "Message:"}}</strong></p>
+        <p>{{var comment}}</p>
+    </tr>
+
+    <tr>
+        <td><strong>{{trans "Name:"}}</strong></td>
+        <td>{{var customer}}</td>
+    </tr>
+
+    <tr>
+        <td><strong>{{trans "Phone:"}}</strong></td>
+        <td>{{var telephone}}</td>
+    </tr>
+    <tr>
+        <td><strong>{{trans "Product Sku:"}}</strong></td>
+        <td>{{var productsku}}</td>
+    </tr>
+    <tr>
+        <td><strong>{{trans "Product Name:"}}</strong></td>
+        <td>{{var productname}}</td>
+    </tr>
+</table>
+
+{{template config_path="design/email/footer_template"}}
+
+
+
